@@ -45,6 +45,23 @@ public class Usuario {
 		this.saldo = saldo;
 	}
 	
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Usuario other = (Usuario) obj;
+		if (cedula == null) {
+			if (other.cedula != null)
+				return false;
+		} else if (!cedula.equals(other.cedula))
+			return false;
+		return true;
+	}
+	
 	
 	
 }

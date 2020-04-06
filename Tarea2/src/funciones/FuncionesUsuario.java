@@ -21,6 +21,11 @@ public class FuncionesUsuario {
 		
 	}
 	
+	public void cobroSueldo(Usuario usuario, int serviciosLaborales) {
+		int saldo = usuario.getSaldo();
+		usuario.setSaldo(saldo + serviciosLaborales);
+	}
+	
 	private boolean validadorEdadSegunRango(int numero, int rangoMin, int rangoMax) {
 		return (rangoMin<=numero && rangoMax >= numero);
 	}
